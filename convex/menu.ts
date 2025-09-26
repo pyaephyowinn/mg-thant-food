@@ -8,6 +8,7 @@ export const getCategories = query({
   returns: v.array(
     v.object({
       _id: v.id("categories"),
+      _creationTime: v.number(),
       name: v.string(),
       description: v.optional(v.string()),
       image: v.optional(v.string()),
@@ -36,6 +37,7 @@ export const getMenuItems = query({
   returns: v.array(
     v.object({
       _id: v.id("menuItems"),
+      _creationTime: v.number(),
       name: v.string(),
       description: v.string(),
       price: v.number(),
@@ -113,6 +115,7 @@ export const getMenuItem = query({
   returns: v.union(
     v.object({
       _id: v.id("menuItems"),
+      _creationTime: v.number(),
       name: v.string(),
       description: v.string(),
       price: v.number(),
